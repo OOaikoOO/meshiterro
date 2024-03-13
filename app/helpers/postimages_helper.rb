@@ -1,0 +1,2 @@
+module PostimagesHelper
+end
