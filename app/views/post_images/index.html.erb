@@ -1,6 +1,8 @@
 <% @post_images.each do |post_image| %>
   <div>
-    <%= image_tag post_image.get_image %>
+    <%= link_to post_image_path(post_image.id) do %>
+      <%= image_tag post_image.get_image %>
+    <% end %>
     <p>投稿ユーザー画像：<%= image_tag 'sample-author1.jpg' %></p>
     <p>ショップ名：<%= post_image.shop_name %></p>
     <p>説明：<%= post_image.caption %></p>
