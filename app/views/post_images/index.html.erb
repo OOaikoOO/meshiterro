@@ -7,5 +7,6 @@
     <p>ショップ名：<%= post_image.shop_name %></p>
     <p>説明：<%= post_image.caption %></p>
     <p>ユーザーネーム：<%= post_image.user.name %></p>
+    <p><%= link_to "#{post_image.post_comments.count} コメント", post_image_path(post_image.id) %></p>
   </div>
 <% end %>
