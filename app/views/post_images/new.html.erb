@@ -17,9 +17,15 @@
           <%= f.file_field :image, accept: "image/*", class: "w-100" %>
           <div class="input-group mb-3 mt-4">
             <div class="input-group-prepend">
-              <span class="input-group-text" aria-hidden="true"><i class="fas fa-building"></i></span>
+              <span class="input-group-text" aria-hidden="true"><i class="fa-solid fa-tenge-sign"></i></span>
             </div>
-            <%= f.text_field :shop_name, class: "form-control", placeholder: "ショップ名" %>
+            <%= text_field_tag :zipcode, nil, class: "form-control", placeholder: "郵便番号" %>
+          </div>
+          <div class="input-group mb-3 mt-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+            </div>
+            <%= f.text_field :address, class: "form-control", placeholder: "住所" %>
           </div>
           <%= f.text_area :caption, class: "form-control", rows: "3", placeholder: "コメントここに" %>
           <hr>
@@ -29,3 +35,4 @@
     </div>
   </div>
 </div>
+<%= javascript_pack_tag "jpostal",  'data-turbolinks-track': 'reload' %>
